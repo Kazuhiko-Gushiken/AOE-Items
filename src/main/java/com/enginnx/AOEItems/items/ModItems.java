@@ -12,7 +12,6 @@ import java.util.function.Supplier;
 public class ModItems {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AOEItems.MODID);
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AOEItems.MODID);
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AOEItems.MODID);
 
