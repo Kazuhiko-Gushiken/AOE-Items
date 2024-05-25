@@ -13,8 +13,6 @@ public class ModItems {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AOEItems.MODID);
 
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AOEItems.MODID);
-
     public static final Supplier<Item> COMPLETIONIST_TROPHY  = ITEMS.registerItem("completionist_trophy", Item::new);
 
     public static void register(IEventBus eventBus) {
