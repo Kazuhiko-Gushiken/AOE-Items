@@ -13,7 +13,7 @@ public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(AOEItems.MODID);
 
-    public static final Supplier<Block> COMPLETIONIST_TROPHY_BLOCK = BLOCKS.register("completionist_trophy_block", () -> new CompletionistTrophy(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> COMPLETIONIST_TROPHY = BLOCKS.register("completionist_trophy", () -> new CompletionistTrophy(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     public static void register(IEventBus eventbus) {
         BLOCKS.register(eventbus);

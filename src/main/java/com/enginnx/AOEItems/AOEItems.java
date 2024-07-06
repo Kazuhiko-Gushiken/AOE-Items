@@ -1,5 +1,6 @@
 package com.enginnx.AOEItems;
 
+import com.enginnx.AOEItems.DataGen.DataGenerators;
 import com.enginnx.AOEItems.blocks.ModBlocks;
 import com.enginnx.AOEItems.items.ModItems;
 import net.minecraft.world.item.*;
@@ -63,8 +64,7 @@ public class AOEItems
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.COMPLETIONIST_TROPHY.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-                output.accept(ModItems.COMPLETIONIST_TROPHY.get());
-                output.accept(ModBlocks.COMPLETIONIST_TROPHY_BLOCK.get());// Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(ModItems.COMPLETIONIST_TROPHY.get());// Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -83,6 +83,8 @@ public class AOEItems
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        modEventBus.addListener(DataGenerators::gatherData);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
